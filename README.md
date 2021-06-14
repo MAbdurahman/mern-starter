@@ -1,4 +1,4 @@
-# mern-auth
+# mern-starter
 
 `this is a mern stack app`
 
