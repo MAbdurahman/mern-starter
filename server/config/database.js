@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const colors = require('colors');
 
 const connectDatabase = () => {
 	mongoose
@@ -9,7 +10,7 @@ const connectDatabase = () => {
 		})
 		.then(con => {
 			console.log(
-				`MongoDB connected to host with mongoose at ${con.connection.host}`
+				`MongoDB connected to ${con.connection.host} with mongoose`.italic.blue
 			);
 		});
 };

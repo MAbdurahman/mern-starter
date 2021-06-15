@@ -3,6 +3,8 @@ const colors = require('colors');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
 
+const authRoutes = require('./routes/authRoutes.js');
+
 
 //**************** variables ****************//
 const app = express();
@@ -19,12 +21,7 @@ if (process.env.NODE_ENV === 'DEVELOPMENT') {
 app.use(express.json());
 
 //**************** routes****************//
-app.get('/', (req, res) => {
-	res.json ( {
-		data: 'API is at Home!!'
-	})
-	// res.send('API is at Home');
-});
+app.use('/api', authRoutes);
 
 
 //**************** app listening ****************//
