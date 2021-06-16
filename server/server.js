@@ -6,13 +6,12 @@ const dotenv = require('dotenv');
 const authRoutes = require('./routes/authRoutes.js');
 const connectDatabase = require('./config/database.js');
 
+//**************** configuration setup ****************//
+dotenv.config();
 //**************** variables ****************//
 const app = express();
 const PORT = process.env.PORT || 8000;
 const NODE_ENV = process.env.NODE_ENV;
-
-//**************** configuration setup ****************//
-dotenv.config();
 
 //**************** connect to database ****************//
 connectDatabase();
