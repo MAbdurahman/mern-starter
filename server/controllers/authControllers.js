@@ -11,7 +11,7 @@ exports.signup = async (req, res) => {
 
         if (user) {
             return res.status(400).json({
-                error: 'Email is already register!',
+                error: 'Email is already registered!',
             });
         }
 
@@ -32,7 +32,7 @@ exports.signup = async (req, res) => {
 
     } catch (error) {
         return res.status(400).json({
-            error: 'Email is already register!',
+            error: 'Email is already registered!',
         });
     }
 };
