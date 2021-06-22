@@ -11,6 +11,7 @@ const uppercase_pattern = /^(?=.*[A-Z])/g;
 const digit_pattern = /^(?=.*\d{1,})/g;
 const special_pattern = /(?=.*[-+_!@#$%^&*?])/g;
 const phone_pattern = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s.]{0,1}[0-9]{3}[-\s.]{0,1}[0-9]{4}$/i;
+const zipcode_pattern = /\d{5}(?:[- ]?\d{4})?/g;
 
 exports.userSignupValidator = [
     check("name")
